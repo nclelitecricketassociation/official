@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #563434;
+}
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories {
+    margin: 70px 0;
+}
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* Container for the team section */
+.categories {
+    padding: 50px 0;
+    background: #fdfdfd;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 50px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+/* The Circle Frame */
+.image-circle {
+    width: 150px;           /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;     /* Makes it a circle */
+    overflow: hidden;       /* Crops the image to the circle */
+    border: 3px solid #ff523b; /* Optional: theme color border */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;       /* Background color if image is transparent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* The Image inside the circle */
+.image-circle img {
+    width: 90%;             /* Leave a little padding inside */
+    height: 90%;
+    object-fit: contain;    /* Ensures the FULL image is visible */
+}
+
+/* Hover Effects */
+.team-card {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #333;
+}
+
+.team-card:hover .image-circle {
+    transform: translateY(-10px); /* Lifts the circle up */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: #333; /* Changes border color on hover */
+}
+
+.team-card h4 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Adjusting the row for many teams */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* Fixture Section Styling */
+.fixtures-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.match-card {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Team Styling inside Card */
+.team {
+    flex: 1;
+}
+
+.team img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.team span {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Center Details (VS, Date, Time) */
+.match-details {
+    flex: 1.5;
+    padding: 0 20px;
+}
+
+.vs {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 900;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.match-date {
+    font-weight: 600;
+    color: #777;
+}
+
+.match-time, .venue {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Hover Effects */
+.match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #ff523b;
+}
+
+.view-btn {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 8px 0;
+    margin: 15px -20px -20px; /* Aligns to the bottom edges */
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.match-card:hover .view-btn {
+    opacity: 1;
+    background: #ff523b;
+}
+
+/* Layout Grid */
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+/* The Player Card */
+.player-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f0f0f0;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Image Section */
+.player-img {
+    background: #fdfdfd;
+    padding: 30px 0;
+    transition: 0.4s;
+}
+
+.player-img img {
+    width: 90px;
+    opacity: 0.3; /* Silhouette effect */
+    transition: 0.4s;
+}
+
+/* Text Section */
+.player-info {
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #f9f9f9;
+}
+
+.player-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 700;
+}
+
+.player-info .role {
+    font-size: 0.8rem;
+    color: #ff523b; /* NCL Theme Color */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HOVER EFFECTS --- */
+
+.player-card:hover {
+    transform: translateY(-12px); /* Lifts the card */
+    box-shadow: 0 15px 30px rgba(255, 82, 59, 0.2); /* Colored shadow */
+    border-color: #ff523b;
+}
+
+.player-card:hover .player-img {
+    background: #ff523b; /* Background turns theme color */
+}
+
+.player-card:hover .player-img img {
+    opacity: 1; /* Silhouette becomes solid white */
+    filter: brightness(0) invert(1); /* Turns black silhouette to white */
+    transform: scale(1.1);
+}
+
+.player-card:hover .player-info h3 {
+    color: #ff523b;
+}
+
+.results-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.result-card {
+    background: #fff;
+    max-width: 850px;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border-left: 6px solid #ff523b; /* Accent border on the side */
+    cursor: default; /* Shows it's not clickable */
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Team & Score Styling */
+.team {
+    flex: 1;
+}
+
+.team img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.team span {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.score {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ff523b;
+    margin-top: 5px;
+}
+
+.score small {
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: 500;
+}
+
+/* Middle Status Styling */
+.result-status {
+    flex: 1.2;
+    padding: 0 15px;
+}
+
+.won-tag {
+    background: #333;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.match-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.venue {
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+/* --- Hover Effect (Unclickable) --- */
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    background-color: #fffdfb;
+}
+
+.result-card:hover .won-tag {
+    background: #ff523b; /* Color shift on hover */
+}
+
+/* PLAYERS NAME */
+
+/* Container for the list */
+.squad-list {
+    max-width: 650px; /* Keeps the rectangles sleek */
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* The Rectangular Box */
+.p-row-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #333; /* Clean black border */
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: default; /* Since it's not clickable anymore */
+}
+
+/* Icon on the left */
+.p-icon img {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/* Text on the right */
+.p-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.p-details p {
+    margin: 3px 0 0;
+    color: #666;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.p-details p span {
+    font-weight: 400;
+}
+
+/* --- THE HOVER EFFECT --- */
+.p-row-card:hover {
+    background: #ff523b; /* Changes to NCL Orange/Red */
+    border-color: #ff523b;
+    transform: translateX(10px); /* Slides right slightly */
+    box-shadow: 5px 5px 15px rgba(255, 82, 59, 0.3);
+}
+
+/* Changes text to white on hover for readability */
+.p-row-card:hover h3, 
+.p-row-card:hover p, 
+.p-row-card:hover p span {
+    color: #fff;
+}
+
+/* Makes the silhouette white on hover */
+.p-row-card:hover .p-icon img {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+.btn-fix {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    align-items: center;
+    .btn-container {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    width: 100%;
+}
+}
+.btn-fix:hover{
+    background: #563434;}
+
+.btn-fix {
+    display: block;      /* Changed from inline-block */
+    width: fit-content;  /* Makes the block only as wide as the text */
+    margin: 30px auto;   /* "auto" on left/right pushes it to the middle */
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 30px;
+    transition: background 0.5s;
+    text-decoration: none; /* Removes underline if it's an <a> tag */
+    text-align: center;
+}
+
+/* Month Grouping Styles */
+.month-group {
+    margin-bottom: 50px; /* Space between months */
+}
+
+.month-name {
+    background: #333; /* Dark professional bar */
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border-left: 5px solid #ff523b; /* NCL Orange Accent */
+}
+
+/* Ensure match cards stack nicely under the month */
+.match-card {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.title:h5 {
+    text-align: center;
+    color: #555;
+}
+/* Terms Page Specific Styles */
+.terms-container {
+    padding: 60px 0;
+    background: #fdfdfd;
+}
+
+.last-updated {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.terms-content section {
+    margin-bottom: 30px;
+}
+
+.terms-content h2 {
+    color: #ff523b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.terms-content p {
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Centering the button */
+.btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
