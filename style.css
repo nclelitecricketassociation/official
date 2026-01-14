@@ -679,3 +679,130 @@ p{
     color: #ff523b;
     font-weight: bold;
 }
+/* Card Container */
+.live-match-card {
+    background: linear-gradient(135deg, #001f3f 0%, #001122 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect */
+.live-match-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff523b;
+    box-shadow: 0 15px 30px rgba(255, 82, 59, 0.2);
+}
+
+/* Header Section */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.live-badge {
+    background: rgba(255, 82, 59, 0.2);
+    color: #ff523b;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Blinking Dot */
+.blink {
+    width: 8px;
+    height: 8px;
+    background: #ff523b;
+    border-radius: 50%;
+    animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Body Section */
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.team-box {
+    text-align: center;
+    flex: 1;
+}
+
+.team-box img {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.team-name {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.score-area {
+    text-align: center;
+    flex: 2;
+}
+
+.score-area h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.score-area p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.vs-line {
+    font-size: 12px;
+    color: #ff523b;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Footer Section */
+.card-footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 15px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.card-footer p {
+    font-size: 13px;
+    color: #ffcc00; /* Yellow for match status */
+    margin-bottom: 10px;
+}
+
+.live-link {
+    display: inline-block;
+    color: #ff523b;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.live-link:hover {
+    text-decoration: underline;
+}
