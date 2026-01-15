@@ -988,3 +988,33 @@ p{
 @media (max-width: 480px) {
     .pinterest-grid { column-count: 1; } /* Small Phones */
 }
+/* Share Button Styling */
+.share-btn {
+    background: #ffffff;
+    color: #ff523b; /* Your NCL Red */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s transform ease;
+}
+
+.share-btn:hover {
+    transform: scale(1.1);
+    background: #ff523b;
+    color: white;
+}
+
+/* Ensure the overlay is centered */
+.gallery-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* Darker tint for better contrast */
+}
