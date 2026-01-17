@@ -41,7 +41,7 @@ const statsData = {
         bowling: [
             { format: "T20", mat: 52, inn: 52, wkts: 68, eco: 6.80, bbi: "4/12" },
             { format: "ODI", mat: 59, inn: 59, wkts: 84, eco: 4.50, bbi: "5/28" },
-            { format: "Test", mat: 63, inn: 126, wkts: 215, eco: 2.90, bbi: "7/45" }
+            { format: "Test", mat: 63, inn: 126, wkts: 219, eco: 2.90, bbi: "7/45" }
         ]
     },
     anurag: {
