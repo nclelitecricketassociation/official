@@ -911,6 +911,7 @@ p{
 .ball.empty { background: rgba(255,255,255,0.1); }
 .ball.six { background: #ff4444; color: white; }
 .ball.four { background: #ff4444; color: white; }
+.ball.four { background: #0d0dc0; color: white; }
 
 @keyframes blink {
     0% { opacity: 1; }
