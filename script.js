@@ -32,7 +32,7 @@ async function shareImg(imgUrl, titleText) {
 const statsData = {
     udit: {
         name: "UDIT GOSWAMI (C)",
-        role: "Right Arm Offspinner / Bowling All Rounder",
+        role: "Right Arm Offspinner / śAll Rounder",
         batting: [
             { format: "T20", mat: 52, inn: 51, runs: 2240, avg: 34.2, sr: 158.5, best: 102},
             { format: "ODI", mat: 59, inn: 59, runs: 4350, avg: 42.1, sr: 92.4, best: 115},
