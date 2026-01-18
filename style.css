@@ -1084,3 +1084,56 @@ p{
     color: #ff523b;
     margin-bottom: 5px;
 }
+
+/* Container Positioning */
+.broadcast-live-card {
+    position: relative; /* Essential for overlay positioning */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* The Hidden Overlay */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 31, 63, 0.85); /* Matches your navy theme with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease;
+    z-index: 10;
+}
+
+/* Show Overlay on Hover */
+.broadcast-live-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* The Match Details Button */
+.details-btn {
+    background: #ff523b; /* Your accent red color */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    transform: translateY(20px);
+    transition: transform 0.4s ease, background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Button animation when overlay appears */
+.broadcast-live-card:hover .details-btn {
+    transform: translateY(0);
+}
+
+.details-btn:hover {
+    background: #e63e2a;
+    color: white;
+    text-decoration: none;
+}
