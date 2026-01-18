@@ -34,9 +34,9 @@ const statsData = {
         name: "UDIT GOSWAMI (C)",
         role: "Right Arm Offspinner / Bowling All Rounder",
         batting: [
-            { format: "T20", mat: 52, inn: 41, runs: 1240, avg: 34.2, sr: 158.5 },
-            { format: "ODI", mat: 59, inn: 46, runs: 1850, avg: 42.1, sr: 92.4 },
-            { format: "Test", mat: 63, inn: 87, runs: 3105, avg: 38.6, sr: 55.2 }
+            { format: "T20", mat: 52, inn: 51, runs: 2240, avg: 34.2, sr: 158.5, best: 102},
+            { format: "ODI", mat: 59, inn: 59, runs: 4350, avg: 42.1, sr: 92.4, best: 115},
+            { format: "Test", mat: 63, inn: 125, runs: 6155, avg: 38.6, sr: 55.2, best: 210}
         ],
         bowling: [
             { format: "T20", mat: 52, inn: 52, wkts: 68, eco: 6.80, bbi: "4/12" },
@@ -48,9 +48,9 @@ const statsData = {
         name: "ANURAG SHARMA (VC)",
         role: "Top Order Batsman",
         batting: [
-            { format: "T20", mat: 48, inn: 48, runs: 1680, avg: 39.5, sr: 145.2 },
-            { format: "ODI", mat: 55, inn: 55, runs: 2450, avg: 48.2, sr: 88.6 },
-            { format: "Test", mat: 40, inn: 74, runs: 3200, avg: 45.8, sr: 52.1 }
+            { format: "T20", mat: 48, inn: 48, runs: 1680, avg: 39.5, sr: 145.2, best:156},
+            { format: "ODI", mat: 55, inn: 55, runs: 2450, avg: 48.2, sr: 88.6, best: 212},
+            { format: "Test", mat: 40, inn: 74, runs: 3200, avg: 45.8, sr: 52.1, best: 178 }
         ],
         bowling: [
             { format: "T20", mat: 48, wkts: "N/A", eco: "N/A" },
